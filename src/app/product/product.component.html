@@ -1,14 +1,13 @@
-<h3 *ngIf="products; else noProduct">{{ title }}</h3>
-
-<div class="form-group">
-  <label for="exampleInputEmail1">Search</label>
+<div *ngIf="products; else noProduct" class="form-group">
+  <h3>{{ title }}</h3>
+  <label for="productSearch">Search</label>
   <input
     class="form-control"
     id="productSearch"
     placeholder="Search in products"
     [(ngModel)]="filterText"
   />
-  <small *ngIf="filterText" id="emailHelp" class="form-text text-muted">
+  <small *ngIf="filterText" class="form-text text-muted">
     <strong>{{ filterText }} </strong> için sonuçlar:
   </small>
 </div>
