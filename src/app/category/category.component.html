@@ -1,0 +1,8 @@
+<h3 *ngIf="categories">{{ title }}</h3>
+
+<div class="list-group">
+    <a href="" class="list-group-item active">All Products</a>
+</div>
+<div *ngFor="let category of categories" class="list-group">
+  <a class="list-group-item"> {{ category.name }}</a>
+</div>
