@@ -1,5 +1,18 @@
 <h3 *ngIf="products; else noProduct">{{ title }}</h3>
 
+<div class="form-group">
+  <label for="exampleInputEmail1">Search</label>
+  <input
+    class="form-control"
+    id="productSearch"
+    placeholder="Search in products"
+    [(ngModel)]="filterText"
+  />
+  <small *ngIf="filterText" id="emailHelp" class="form-text text-muted">
+    <strong>{{ filterText }} </strong> için sonuçlar:
+  </small>
+</div>
+
 <div class="row">
   <ng-template #noProduct>
     <div class="alert alert-danger" role="alert">
@@ -7,14 +20,20 @@
     </div>
   </ng-template>
 
-  <div *ngFor="let product of products" class="card" style="width: 18rem;">
-    <img src={{product.imageUrl}} class="card-img-top" alt="..." />
+  <div
+    *ngFor="let product of products | productFilter: filterText"
+    class="card"
+    style="width: 18rem;"
+  >
+    <img src="{{ product.imageUrl }}" class="card-img-top" alt="..." />
     <div class="card-body">
-      <h5 class="card-title">{{product.name}} - {{product.price}} TL</h5>
+      <h5 class="card-title">
+        {{ product.name }} {{ product.price | currency: "₺":"symbol":"1.2-2" }}
+      </h5>
       <p class="card-text">
-        {{product.description}}
+        {{ product.description }}
       </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a (click)="addToCart(product)" class="btn btn-primary">Sepete Ekle</a>
     </div>
   </div>
 </div>
