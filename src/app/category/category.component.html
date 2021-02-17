@@ -1,8 +1,15 @@
-<h3 *ngIf="categories">{{ title }}</h3>
-
-<div class="list-group">
-    <a class="list-group-item active" routerLink="products">All Products</a>
-</div>
-<div *ngFor="let category of categories" class="list-group">
-  <a class="list-group-item" routerLink="products/category/{{category.id}}"> {{ category.name }}</a>
+<div class="nav-scroller py-1 mb-2">
+  <nav class="nav d-flex">
+    <a
+      routerLink="/products"
+      class="p-2 link-secondary"
+      >Tümü</a
+    >
+    <a
+      *ngFor="let category of categories"
+      routerLink="/products/category/{{ category.id }}"
+      class="p-2 link-secondary"
+      >{{ category.name }}</a
+    >
+  </nav>
 </div>

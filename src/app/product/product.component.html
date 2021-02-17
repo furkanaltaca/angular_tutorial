@@ -1,5 +1,7 @@
+<app-category></app-category>
+
 <div *ngIf="products; else noProduct" class="form-group">
-  <h3>{{ title }}</h3>
+  <!-- <h3>{{ title }}</h3> -->
   <label for="productSearch">Search</label>
   <input
     class="form-control"
@@ -18,7 +20,7 @@
   </ng-template>
 
   <div
-    class="col-md-3 pt-3"
+    class="col-md-3 p-3"
     *ngFor="let product of products | productFilter: filterText"
   >
     <div class="card">
