@@ -2,9 +2,9 @@
   "categories": [
     { "id": 1, "name": "Bilgisayar" },
     { "id": 2, "name": "Elektronik" },
-    { "id": 2, "name": "İletişim" },
-    { "id": 2, "name": "Müzik" },
-    { "id": 2, "name": "Diğer" }
+    { "id": 3, "name": "İletişim" },
+    { "id": 4, "name": "Müzik" },
+    { "id": 5, "name": "Diğer" }
   ],
   "products": [
     {
