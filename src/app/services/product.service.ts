@@ -10,11 +10,17 @@ export class ProductService {
 
   path = 'http://localhost:3000/products';
 
-  getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.path).pipe(
-      tap((data) => console.log(JSON.stringify(data))),
-      catchError(this.handleError)
-    );
+  getProducts(categoryId): Observable<Product[]> {
+    let newPath = this.path;
+    if (categoryId) {
+      newPath = this.path + '?categoryId=' + categoryId;
+    }
+    return this.http
+      .get<Product[]>(newPath)
+      .pipe(
+        tap((data) => console.log(JSON.stringify(data))),
+        catchError(this.handleError)
+      );
   }
   handleError(err: HttpErrorResponse) {
     let errorMessage = '';
@@ -22,7 +28,7 @@ export class ProductService {
       errorMessage = 'Bir hata oluştu: ' + err.error.message;
     } else {
       errorMessage = 'Sistemsel bir hata oluştu';
-    } 
+    }
     return throwError(errorMessage);
   }
 }
