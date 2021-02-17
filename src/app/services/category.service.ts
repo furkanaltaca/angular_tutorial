@@ -12,7 +12,7 @@ export class CategoryService {
 
   getCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(this.path).pipe(
-      tap((data) => console.log(JSON.stringify(data))),
+      // tap((data) => console.log(JSON.stringify(data))),
       catchError(this.handleError)
     );
   }
