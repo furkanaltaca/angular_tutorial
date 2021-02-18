@@ -7,12 +7,12 @@ import { ProductService } from 'src/app/services/product.service';
 import { Product } from '../product';
 
 @Component({
-  selector: 'app-product-add-clasic',
-  templateUrl: './product-add-clasic.component.html',
-  styleUrls: ['./product-add-clasic.component.css'],
+  selector: 'app-product-add-classic',
+  templateUrl: './product-add-classic.component.html',
+  styleUrls: ['./product-add-classic.component.css'],
   providers: [CategoryService, ProductService],
 })
-export class ProductAddClasicComponent implements OnInit {
+export class ProductAddClassicComponent implements OnInit {
   constructor(
     private categoryService: CategoryService,
     private productService: ProductService,

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProductAddClasicComponent } from './product-add-clasic.component';
+import { ProductAddClassicComponent } from './product-add-classic.component';
 
 describe('ProductAddClasicComponent', () => {
-  let component: ProductAddClasicComponent;
-  let fixture: ComponentFixture<ProductAddClasicComponent>;
+  let component: ProductAddClassicComponent;
+  let fixture: ComponentFixture<ProductAddClassicComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProductAddClasicComponent ]
+      declarations: [ ProductAddClassicComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProductAddClasicComponent);
+    fixture = TestBed.createComponent(ProductAddClassicComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
