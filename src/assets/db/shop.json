@@ -1,16 +1,31 @@
 {
   "categories": [
-    { "id": 1, "name": "Bilgisayar" },
-    { "id": 2, "name": "Elektronik" },
-    { "id": 3, "name": "İletişim" },
-    { "id": 4, "name": "Müzik" },
-    { "id": 5, "name": "Diğer" }
+    {
+      "id": 1,
+      "name": "Bilgisayar"
+    },
+    {
+      "id": 2,
+      "name": "Elektronik"
+    },
+    {
+      "id": 3,
+      "name": "İletişim"
+    },
+    {
+      "id": 4,
+      "name": "Müzik"
+    },
+    {
+      "id": 5,
+      "name": "Diğer"
+    }
   ],
   "products": [
     {
       "id": 1,
       "name": "Laptop",
-      "price": 3000,
+      "price": 3100,
       "categoryId": 1,
       "description": "Dell Latitude",
       "imageUrl": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
@@ -62,6 +77,22 @@
       "categoryId": 1,
       "description": "Apple",
       "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "name": "Hedy Adkins",
+      "description": "Qui consequat Fuga",
+      "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "price": 319,
+      "categoryId": "1",
+      "id": 8
+    },
+    {
+      "name": "Richard Wilcox",
+      "description": "Cupidatat sit eos s",
+      "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80",
+      "price": 784,
+      "categoryId": "5",
+      "id": 9
     }
   ]
 }
