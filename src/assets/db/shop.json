@@ -93,6 +93,14 @@
       "price": 784,
       "categoryId": "5",
       "id": 9
+    },
+    {
+      "name": "Kalia Schneider",
+      "description": "Dolor tempor cupidit",
+      "imageUrl": "Est ratione accusamu",
+      "price": "554",
+      "categoryId": "5",
+      "id": 10
     }
   ]
 }

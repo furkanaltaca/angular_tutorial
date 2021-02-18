@@ -1,0 +1,37 @@
+<h3>Yeni Ürün Ekle (Reactive Form)</h3>
+
+<form [formGroup]="productAddForm" (ngSubmit)="addProduct()">
+    <div class="mb-3">
+        <input type="text" id="name" name="name" formControlName="name" class="form-control" placeholder="Ürün Adı">
+        <div *ngIf="productAddForm.get('name').hasError('required') && productAddForm.get('name').dirty"
+            class="alert alert-danger">Ürün adı gereklidir.</div>
+    </div>
+    <div class="mb-3">
+        <input type="text" id="description" name="description" formControlName="description" class="form-control"
+            placeholder="Ürün Açıklaması">
+        <div *ngIf="productAddForm.get('description').hasError('required') && productAddForm.get('description').dirty"
+            class="alert alert-danger">Ürün açıklaması gereklidir.</div>
+    </div>
+    <div class="mb-3">
+        <input type="text" id="imageUrl" name="imageUrl" formControlName="imageUrl" class="form-control"
+            placeholder="Ürün Fotoğrafı">
+        <div *ngIf="productAddForm.get('imageUrl').hasError('required') && productAddForm.get('imageUrl').dirty"
+            class="alert alert-danger">Ürün fotoğrafı gereklidir.</div>
+    </div>
+    <div class="mb-3">
+        <input type="text" id="price" name="price" formControlName="price" class="form-control"
+            placeholder="Ürün Fiyatı">
+        <div *ngIf="productAddForm.get('price').hasError('required') && productAddForm.get('price').dirty"
+            class="alert alert-danger">Ürün fiyatı gereklidir.</div>
+    </div>
+    <div class="mb-3">
+        <select class="form-control" formControlName="categoryId" required id="categoryId"
+            name="categoryId">
+            <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+        </select>
+        <div *ngIf="productAddForm.get('categoryId').hasError('required') && productAddForm.get('categoryId').touched" class="alert alert-danger">
+            Ürün kategorisi gereklidir.
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="productAddForm.invalid">Kaydet</button>
+</form>
