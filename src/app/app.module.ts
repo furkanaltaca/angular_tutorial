@@ -11,6 +11,7 @@ import { ProductComponent } from './product/product.component';
 import { ProductFilterPipe } from './product/product-filter.pipe';
 import { AlertifyService } from './services/alertify.service';
 import { ProductAddClassicComponent } from './product/product-add-classic/product-add-classic.component';
+import { ProductAddReactiveComponent } from './product/product-add-reactive/product-add-reactive.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ProductAddClassicComponent } from './product/product-add-classic/produc
     ProductComponent,
     ProductFilterPipe,
     ProductAddClassicComponent,
+    ProductAddReactiveComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [AlertifyService],
