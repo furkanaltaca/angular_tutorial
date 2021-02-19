@@ -13,5 +13,15 @@
     {
       "path": "./tsconfig.spec.json"
     }
-]
+  ]
+  // ,
+  // "compilerOptions": {
+  //   "outDir": "./dist",
+  //   "rootDir": "./src",
+  //   /* Experimental Options */
+  //   "experimentalDecorators": true,
+  //   "emitDecoratorMetadata": true,
+  //   /* Advanced Options */
+  //   "forceConsistentCasingInFileNames": true
+  // }
 }
