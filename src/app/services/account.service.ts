@@ -15,7 +15,7 @@ export class AccountService {
     return false;
   }
 
-  logout() {
+  logOut() {
     this.loggedIn = false;
     localStorage.removeItem('isLogged');
   }

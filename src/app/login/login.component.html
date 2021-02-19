@@ -1,11 +1,21 @@
 <main class="form-signin text-center">
-    <form>
-      <h1 class="h3 mb-3 fw-normal">Sisteme Giriş</h1>
-      <label for="inputEmail" class="visually-hidden">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <label for="inputPassword" class="visually-hidden">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Giriş Yap</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
-    </form>
-  </main>
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <h1 class="h3 mb-3 fw-normal">Sisteme Giriş</h1>
+    <div class="mb-3">
+      <input type="text" placeholder="Kullanıcı Adı" #username="ngModel" [(ngModel)]="user.username"
+        class="form-control" name="userName" id="userName" required autofocus />
+      <div *ngIf="username.invalid && username.dirty" class="alert alert-danger">
+        Kullanıcı adı gereklidir.
+      </div>
+    </div>
+    <div class="mb-3">
+      <input type="text" placeholder="Şifre" #password="ngModel" [(ngModel)]="user.password" class="form-control"
+        name="password" id="password" required />
+      <div *ngIf="password.invalid && password.dirty" class="alert alert-danger">
+        Şifre gereklidir.
+      </div>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Giriş Yap</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  </form>
+</main>
